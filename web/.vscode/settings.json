@@ -1,0 +1,14 @@
+{
+    "eslint.options": {
+        "configFile": "D:/vs/eslint/.eslintrc.js",
+        "plugins": [
+            "html"
+        ]
+    },
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "html",
+        "vue"
+    ]
+}

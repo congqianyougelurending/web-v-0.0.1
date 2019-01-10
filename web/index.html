@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>CoffeeRun</title>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <style>
+    form :focus:required:invalid {
+    border-color: #a94442;
+  }
+</style>
+</head>
+
+
+<body>
+  <header>
+    <h1>CoffeeRun</h1>
+  </header>
+  <section>
+    <div class="container panel panel-default mt-3">
+      <div class="panel-body">
+        <form data-coffee-order="form">
+          <div class="form-group">
+            <label for="coffeeOrder">下单人</label>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">姓名</span>
+              </div>
+              <input class="form-control" name="coffee" id="coffeeOrder" autofocus required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="emailInput">邮箱</label>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">邮箱</span>
+              </div>
+              <input class="form-control" type="email" name="emailAddress" id="emailInput" value="" placeholder="dr@ho.com"
+                required>
+            </div>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="小杯">
+              小杯
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="中杯" checked>
+              中杯
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="大杯">
+              大杯
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="超大杯">
+              超大杯
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="flavorShot">口味</label>
+            <select id="flavorShot" class="form-control" name="flavor">
+              <option value="">无</option>
+              <option value="焦糖">焦糖</option>
+              <option value="巧克力">巧克力</option>
+              <option value="抹茶">抹茶</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="strengthLevel">咖啡浓度</label>
+            <input name="strength" class="custom-range" id="strengthLevel" type="range" value="30">
+            <span id="range_value"></span>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="num" value="一杯" checked>
+              一杯
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="num" value="两杯">
+              两杯
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="num" value="三杯">
+              三杯
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="num" value="四杯">
+              四杯
+            </label>
+          </div>
+          <div class="d-flex justify-content-around">
+            <button type="submit" class="btn btn-outline-primary">下单</button>
+            <button type="reset" class="btn btn-outline-secondary">重选</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="container panel panel-default">
+      <div class="panel-body">
+        <h4>未付款订单:</h4>
+        <div data-coffee-order="checklist">
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <script src="js/validation.js" charset="utf-8"></script>
+  <script src="js/checklist.js"></script>
+  <script src="js/formhander.js"></script>
+  <script src="js/remotedatastore.js"></script>
+  <script src="js/datastore.js"></script>
+  <script src="js/truck.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
