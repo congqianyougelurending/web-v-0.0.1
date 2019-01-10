@@ -1,10 +1,9 @@
 (function (window) {
     'use strict';
-    // 放置要运行的代码   
+    //变量初始化
     var App = window.App || {};
 
     function Truck(truckId, db) {
-        //console.log('running the Truck function');
         this.truckId = truckId;
         this.db = db;
     }
